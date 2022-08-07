@@ -1,6 +1,7 @@
 package iso4217
 
 import (
+	"fmt"
 	"reflect"
 	"testing"
 )
@@ -17,6 +18,10 @@ var (
 
 	AWG       string = "AWG"
 	AWGStruct        = ISOEntry(isocodes[AWG])
+
+	VES       string = "VES"
+	VESStruct        = ISOEntry(isocodes[VES])
+
 )
 
 func TestAlphaMatch(t *testing.T) {
@@ -33,10 +38,13 @@ func TestAlphaMatch(t *testing.T) {
 		{"USD lower Test", args{s: "usd"}, &USD},
 		{"Nothing Test", args{s: ""}, Nil},
 		{"AWG Test", args{s: "Åruban Florin"}, &AWG},
+		{"VES Test", args{s: "Bolívar Soberano"}, &VES},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := AlphaMatch(tt.args.s); !reflect.DeepEqual(got, tt.want) {
+			got := AlphaMatch(tt.args.s)
+			fmt.Println(got)
+			if !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("Alpha3Match() = %#v, want %#v", *got, *tt.want)
 			}
 		})
@@ -57,6 +65,7 @@ func TestStructMatch(t *testing.T) {
 		{"USD upper Test", args{s: "usd"}, &USDStruct},
 		{"Nothing Test", args{s: ""}, NilStruct},
 		{"AWG Test", args{s: "Åruban Florin"}, &AWGStruct},
+		{"VES Test", args{s: "Bolívar Soberano"}, &VESStruct},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

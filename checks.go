@@ -23,14 +23,14 @@ func AlphaMatch(s string) *string {
 	var (
 		returnStr string
 	)
-	s = strings.ToLower(strings.TrimSpace(s))
+	s = convertDia(strings.ToLower(strings.TrimSpace(s)))
 
 	for key, val := range isocodes {
 		if s == strings.ToLower(key) {
 			returnStr = fmt.Sprintf("%v", key)
 			return &returnStr
 		}
-		if convertDia(s) == strings.ToLower(strings.TrimSpace(val.currencyName)) {
+		if s == convertDia(strings.ToLower(strings.TrimSpace(val.currencyName))) {
 			returnStr = fmt.Sprintf("%v", key)
 			return &returnStr
 		}
@@ -48,13 +48,13 @@ func StructMatch(s string) *ISOEntry {
 	var (
 		entry ISOEntry
 	)
-	s = strings.ToLower(strings.TrimSpace(s))
+	s = convertDia(strings.ToLower(strings.TrimSpace(s)))
 	for key, val := range isocodes {
 		if s == strings.ToLower(key) {
 			entry = ISOEntry(val)
 			return &entry
 		}
-		if convertDia(s) == strings.ToLower(strings.TrimSpace(val.currencyName)) {
+		if s == convertDia(strings.ToLower(strings.TrimSpace(val.currencyName))) {
 			entry = ISOEntry(val)
 			return &entry
 		}
