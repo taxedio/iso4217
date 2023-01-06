@@ -11,6 +11,7 @@ type ISOEntry struct {
 	currencyName string
 	numCode      string
 	minorUnit    string
+	active       bool
 }
 
 var (
@@ -36,6 +37,11 @@ var (
 					Name:   "belgium",
 					Alpha2: "BE",
 					Alpha3: "BEL",
+				},
+				{
+					Name:   "croatia",
+					Alpha2: "HR",
+					Alpha3: "HRV",
 				},
 				{
 					Name:   "cyprus",
@@ -196,6 +202,7 @@ var (
 			currencyName: "Euro",
 			numCode:      "978",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"ALL": {
 			countryName: []Country{
@@ -208,6 +215,7 @@ var (
 			currencyName: "Lek",
 			numCode:      "008",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"DZD": {
 			countryName: []Country{
@@ -220,6 +228,7 @@ var (
 			currencyName: "Algerian Dinar",
 			numCode:      "012",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"USD": {
 			countryName: []Country{
@@ -322,6 +331,7 @@ var (
 			currencyName: "US Dollar",
 			numCode:      "840",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"AOA": {
 			countryName: []Country{
@@ -334,6 +344,7 @@ var (
 			currencyName: "Kwanza",
 			numCode:      "973",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"XCD": {
 			countryName: []Country{
@@ -381,6 +392,7 @@ var (
 			currencyName: "East Caribbean Dollar",
 			numCode:      "951",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"UNKNOWN": {
 			countryName: []Country{
@@ -415,6 +427,7 @@ var (
 			currencyName: "Argentine Peso",
 			numCode:      "032",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"AMD": {
 			countryName: []Country{
@@ -427,6 +440,7 @@ var (
 			currencyName: "Armenian Dram",
 			numCode:      "051",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"AWG": {
 			countryName: []Country{
@@ -439,6 +453,7 @@ var (
 			currencyName: "Aruban Florin",
 			numCode:      "533",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"AUD": {
 			countryName: []Country{
@@ -486,6 +501,7 @@ var (
 			currencyName: "Australian Dollar",
 			numCode:      "036",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"AZN": {
 			countryName: []Country{
@@ -498,6 +514,7 @@ var (
 			currencyName: "Azerbaijan Manat",
 			numCode:      "944",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"BSD": {
 			countryName: []Country{
@@ -510,6 +527,7 @@ var (
 			currencyName: "Bahamian Dollar",
 			numCode:      "044",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"BHD": {
 			countryName: []Country{
@@ -534,6 +552,7 @@ var (
 			currencyName: "Taka",
 			numCode:      "050",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"BBD": {
 			countryName: []Country{
@@ -546,6 +565,7 @@ var (
 			currencyName: "Barbados Dollar",
 			numCode:      "052",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"BYN": {
 			countryName: []Country{
@@ -558,6 +578,7 @@ var (
 			currencyName: "Belarusian Ruble",
 			numCode:      "933",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"BZD": {
 			countryName: []Country{
@@ -570,6 +591,7 @@ var (
 			currencyName: "Belize Dollar",
 			numCode:      "084",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"XOF": {
 			countryName: []Country{
@@ -629,6 +651,7 @@ var (
 			currencyName: "Bermudian Dollar",
 			numCode:      "060",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"INR": {
 			countryName: []Country{
@@ -646,6 +669,7 @@ var (
 			currencyName: "Indian Rupee",
 			numCode:      "356",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"BTN": {
 			countryName: []Country{
@@ -658,6 +682,7 @@ var (
 			currencyName: "Ngultrum",
 			numCode:      "064",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"BOB": {
 			countryName: []Country{
@@ -670,6 +695,7 @@ var (
 			currencyName: "Boliviano",
 			numCode:      "068",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"BOV": {
 			countryName: []Country{
@@ -682,6 +708,7 @@ var (
 			currencyName: "Mvdol",
 			numCode:      "984",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"BAM": {
 			countryName: []Country{
@@ -694,6 +721,7 @@ var (
 			currencyName: "Convertible Mark",
 			numCode:      "977",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"BWP": {
 			countryName: []Country{
@@ -706,6 +734,7 @@ var (
 			currencyName: "Pula",
 			numCode:      "072",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"NOK": {
 			countryName: []Country{
@@ -728,6 +757,7 @@ var (
 			currencyName: "Norwegian Krone",
 			numCode:      "578",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"BRL": {
 			countryName: []Country{
@@ -740,6 +770,7 @@ var (
 			currencyName: "Brazilian Real",
 			numCode:      "986",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"BND": {
 			countryName: []Country{
@@ -752,6 +783,7 @@ var (
 			currencyName: "Brunei Dollar",
 			numCode:      "096",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"BGN": {
 			countryName: []Country{
@@ -764,6 +796,7 @@ var (
 			currencyName: "Bulgarian Lev",
 			numCode:      "975",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"BIF": {
 			countryName: []Country{
@@ -788,6 +821,7 @@ var (
 			currencyName: "Cabo Verde Escudo",
 			numCode:      "132",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"KHR": {
 			countryName: []Country{
@@ -800,6 +834,7 @@ var (
 			currencyName: "Riel",
 			numCode:      "116",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"XAF": {
 			countryName: []Country{
@@ -849,6 +884,7 @@ var (
 			currencyName: "Canadian Dollar",
 			numCode:      "124",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"KYD": {
 			countryName: []Country{
@@ -861,6 +897,7 @@ var (
 			currencyName: "Cayman Islands Dollar",
 			numCode:      "136",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"CLP": {
 			countryName: []Country{
@@ -897,6 +934,7 @@ var (
 			currencyName: "Yuan Renminbi",
 			numCode:      "156",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"COP": {
 			countryName: []Country{
@@ -909,6 +947,7 @@ var (
 			currencyName: "Colombian Peso",
 			numCode:      "170",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"COU": {
 			countryName: []Country{
@@ -921,6 +960,7 @@ var (
 			currencyName: "Unidad de Valor Real",
 			numCode:      "970",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"KMF": {
 			countryName: []Country{
@@ -945,6 +985,7 @@ var (
 			currencyName: "Congolese Franc",
 			numCode:      "976",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"NZD": {
 			countryName: []Country{
@@ -977,6 +1018,7 @@ var (
 			currencyName: "New Zealand Dollar",
 			numCode:      "554",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"CRC": {
 			countryName: []Country{
@@ -989,6 +1031,7 @@ var (
 			currencyName: "Costa Rican Colon",
 			numCode:      "188",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"HRK": {
 			countryName: []Country{
@@ -1001,6 +1044,7 @@ var (
 			currencyName: "Kuna",
 			numCode:      "191",
 			minorUnit:    "2",
+			active:       false,
 		},
 		"CUP": {
 			countryName: []Country{
@@ -1013,6 +1057,7 @@ var (
 			currencyName: "Cuban Peso",
 			numCode:      "192",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"CUC": {
 			countryName: []Country{
@@ -1025,6 +1070,7 @@ var (
 			currencyName: "Peso Convertible",
 			numCode:      "931",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"ANG": {
 			countryName: []Country{
@@ -1042,6 +1088,7 @@ var (
 			currencyName: "Netherlands Antillean Guilder",
 			numCode:      "532",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"CZK": {
 			countryName: []Country{
@@ -1054,6 +1101,7 @@ var (
 			currencyName: "Czech Koruna",
 			numCode:      "203",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"DKK": {
 			countryName: []Country{
@@ -1076,6 +1124,7 @@ var (
 			currencyName: "Danish Krone",
 			numCode:      "208",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"DJF": {
 			countryName: []Country{
@@ -1100,6 +1149,7 @@ var (
 			currencyName: "Dominican Peso",
 			numCode:      "214",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"EGP": {
 			countryName: []Country{
@@ -1112,6 +1162,7 @@ var (
 			currencyName: "Egyptian Pound",
 			numCode:      "818",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"SVC": {
 			countryName: []Country{
@@ -1124,6 +1175,7 @@ var (
 			currencyName: "El Salvador Colon",
 			numCode:      "222",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"ERN": {
 			countryName: []Country{
@@ -1136,6 +1188,7 @@ var (
 			currencyName: "Nakfa",
 			numCode:      "232",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"SZL": {
 			countryName: []Country{
@@ -1148,6 +1201,7 @@ var (
 			currencyName: "Lilangeni",
 			numCode:      "748",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"ETB": {
 			countryName: []Country{
@@ -1160,6 +1214,7 @@ var (
 			currencyName: "Ethiopian Birr",
 			numCode:      "230",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"FKP": {
 			countryName: []Country{
@@ -1172,6 +1227,7 @@ var (
 			currencyName: "Falkland Islands Pound",
 			numCode:      "238",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"FJD": {
 			countryName: []Country{
@@ -1184,6 +1240,7 @@ var (
 			currencyName: "Fiji Dollar",
 			numCode:      "242",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"XPF": {
 			countryName: []Country{
@@ -1218,6 +1275,7 @@ var (
 			currencyName: "Dalasi",
 			numCode:      "270",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"GEL": {
 			countryName: []Country{
@@ -1230,6 +1288,7 @@ var (
 			currencyName: "Lari",
 			numCode:      "981",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"GHS": {
 			countryName: []Country{
@@ -1242,6 +1301,7 @@ var (
 			currencyName: "Ghana Cedi",
 			numCode:      "936",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"GIP": {
 			countryName: []Country{
@@ -1254,6 +1314,7 @@ var (
 			currencyName: "Gibraltar Pound",
 			numCode:      "292",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"GTQ": {
 			countryName: []Country{
@@ -1266,6 +1327,7 @@ var (
 			currencyName: "Quetzal",
 			numCode:      "320",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"GBP": {
 			countryName: []Country{
@@ -1293,6 +1355,7 @@ var (
 			currencyName: "Pound Sterling",
 			numCode:      "826",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"GNF": {
 			countryName: []Country{
@@ -1317,6 +1380,7 @@ var (
 			currencyName: "Guyana Dollar",
 			numCode:      "328",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"HTG": {
 			countryName: []Country{
@@ -1329,6 +1393,7 @@ var (
 			currencyName: "Gourde",
 			numCode:      "332",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"HNL": {
 			countryName: []Country{
@@ -1341,6 +1406,7 @@ var (
 			currencyName: "Lempira",
 			numCode:      "340",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"HKD": {
 			countryName: []Country{
@@ -1353,6 +1419,7 @@ var (
 			currencyName: "Hong Kong Dollar",
 			numCode:      "344",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"HUF": {
 			countryName: []Country{
@@ -1365,6 +1432,7 @@ var (
 			currencyName: "Forint",
 			numCode:      "348",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"ISK": {
 			countryName: []Country{
@@ -1389,6 +1457,7 @@ var (
 			currencyName: "Rupiah",
 			numCode:      "360",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"XDR": {
 			countryName: []Country{
@@ -1413,6 +1482,7 @@ var (
 			currencyName: "Iranian Rial",
 			numCode:      "364",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"IQD": {
 			countryName: []Country{
@@ -1437,6 +1507,7 @@ var (
 			currencyName: "New Israeli Sheqel",
 			numCode:      "376",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"JMD": {
 			countryName: []Country{
@@ -1449,6 +1520,7 @@ var (
 			currencyName: "Jamaican Dollar",
 			numCode:      "388",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"JPY": {
 			countryName: []Country{
@@ -1485,6 +1557,7 @@ var (
 			currencyName: "Tenge",
 			numCode:      "398",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"KES": {
 			countryName: []Country{
@@ -1497,6 +1570,7 @@ var (
 			currencyName: "Kenyan Shilling",
 			numCode:      "404",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"KPW": {
 			countryName: []Country{
@@ -1509,6 +1583,7 @@ var (
 			currencyName: "North Korean Won",
 			numCode:      "408",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"KRW": {
 			countryName: []Country{
@@ -1545,6 +1620,7 @@ var (
 			currencyName: "Som",
 			numCode:      "417",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"LAK": {
 			countryName: []Country{
@@ -1557,6 +1633,7 @@ var (
 			currencyName: "Lao Kip",
 			numCode:      "418",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"LBP": {
 			countryName: []Country{
@@ -1569,6 +1646,7 @@ var (
 			currencyName: "Lebanese Pound",
 			numCode:      "422",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"LSL": {
 			countryName: []Country{
@@ -1581,6 +1659,7 @@ var (
 			currencyName: "Loti",
 			numCode:      "426",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"ZAR": {
 			countryName: []Country{
@@ -1603,6 +1682,7 @@ var (
 			currencyName: "Rand",
 			numCode:      "710",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"LRD": {
 			countryName: []Country{
@@ -1615,6 +1695,7 @@ var (
 			currencyName: "Liberian Dollar",
 			numCode:      "430",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"LYD": {
 			countryName: []Country{
@@ -1644,6 +1725,7 @@ var (
 			currencyName: "Swiss Franc",
 			numCode:      "756",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"MOP": {
 			countryName: []Country{
@@ -1656,6 +1738,7 @@ var (
 			currencyName: "Pataca",
 			numCode:      "446",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"MKD": {
 			countryName: []Country{
@@ -1668,6 +1751,7 @@ var (
 			currencyName: "Denar",
 			numCode:      "807",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"MGA": {
 			countryName: []Country{
@@ -1680,6 +1764,7 @@ var (
 			currencyName: "Malagasy Ariary",
 			numCode:      "969",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"MWK": {
 			countryName: []Country{
@@ -1692,6 +1777,7 @@ var (
 			currencyName: "Malawi Kwacha",
 			numCode:      "454",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"MYR": {
 			countryName: []Country{
@@ -1704,6 +1790,7 @@ var (
 			currencyName: "Malaysian Ringgit",
 			numCode:      "458",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"MVR": {
 			countryName: []Country{
@@ -1716,6 +1803,7 @@ var (
 			currencyName: "Rufiyaa",
 			numCode:      "462",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"MRU": {
 			countryName: []Country{
@@ -1728,6 +1816,7 @@ var (
 			currencyName: "Ouguiya",
 			numCode:      "929",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"MUR": {
 			countryName: []Country{
@@ -1740,6 +1829,7 @@ var (
 			currencyName: "Mauritius Rupee",
 			numCode:      "480",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"XUA": {
 			countryName: []Country{
@@ -1764,6 +1854,7 @@ var (
 			currencyName: "Mexican Peso",
 			numCode:      "484",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"MXV": {
 			countryName: []Country{
@@ -1776,6 +1867,7 @@ var (
 			currencyName: "Mexican Unidad de Inversion (UDI)",
 			numCode:      "979",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"MDL": {
 			countryName: []Country{
@@ -1788,6 +1880,7 @@ var (
 			currencyName: "Moldovan Leu",
 			numCode:      "498",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"MNT": {
 			countryName: []Country{
@@ -1800,6 +1893,7 @@ var (
 			currencyName: "Tugrik",
 			numCode:      "496",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"MAD": {
 			countryName: []Country{
@@ -1817,6 +1911,7 @@ var (
 			currencyName: "Moroccan Dirham",
 			numCode:      "504",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"MZN": {
 			countryName: []Country{
@@ -1829,6 +1924,7 @@ var (
 			currencyName: "Mozambique Metical",
 			numCode:      "943",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"MMK": {
 			countryName: []Country{
@@ -1841,6 +1937,7 @@ var (
 			currencyName: "Kyat",
 			numCode:      "104",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"NAD": {
 			countryName: []Country{
@@ -1853,6 +1950,7 @@ var (
 			currencyName: "Namibia Dollar",
 			numCode:      "516",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"NPR": {
 			countryName: []Country{
@@ -1865,6 +1963,7 @@ var (
 			currencyName: "Nepalese Rupee",
 			numCode:      "524",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"NIO": {
 			countryName: []Country{
@@ -1877,6 +1976,7 @@ var (
 			currencyName: "Cordoba Oro",
 			numCode:      "558",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"NGN": {
 			countryName: []Country{
@@ -1889,6 +1989,7 @@ var (
 			currencyName: "Naira",
 			numCode:      "566",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"OMR": {
 			countryName: []Country{
@@ -1913,6 +2014,7 @@ var (
 			currencyName: "Pakistan Rupee",
 			numCode:      "586",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"PAB": {
 			countryName: []Country{
@@ -1925,6 +2027,7 @@ var (
 			currencyName: "Balboa",
 			numCode:      "590",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"PGK": {
 			countryName: []Country{
@@ -1937,6 +2040,7 @@ var (
 			currencyName: "Kina",
 			numCode:      "598",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"PYG": {
 			countryName: []Country{
@@ -1961,6 +2065,7 @@ var (
 			currencyName: "Sol",
 			numCode:      "604",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"PHP": {
 			countryName: []Country{
@@ -1973,6 +2078,7 @@ var (
 			currencyName: "Philippine Peso",
 			numCode:      "608",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"PLN": {
 			countryName: []Country{
@@ -1985,6 +2091,7 @@ var (
 			currencyName: "Zloty",
 			numCode:      "985",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"QAR": {
 			countryName: []Country{
@@ -1997,6 +2104,7 @@ var (
 			currencyName: "Qatari Rial",
 			numCode:      "634",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"RON": {
 			countryName: []Country{
@@ -2009,6 +2117,7 @@ var (
 			currencyName: "Romanian Leu",
 			numCode:      "946",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"RUB": {
 			countryName: []Country{
@@ -2021,6 +2130,7 @@ var (
 			currencyName: "Russian Ruble",
 			numCode:      "643",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"RWF": {
 			countryName: []Country{
@@ -2045,6 +2155,7 @@ var (
 			currencyName: "Saint Helena Pound",
 			numCode:      "654",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"WST": {
 			countryName: []Country{
@@ -2057,6 +2168,7 @@ var (
 			currencyName: "Tala",
 			numCode:      "882",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"STN": {
 			countryName: []Country{
@@ -2069,6 +2181,7 @@ var (
 			currencyName: "Dobra",
 			numCode:      "930",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"SAR": {
 			countryName: []Country{
@@ -2081,6 +2194,7 @@ var (
 			currencyName: "Saudi Riyal",
 			numCode:      "682",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"RSD": {
 			countryName: []Country{
@@ -2093,6 +2207,7 @@ var (
 			currencyName: "Serbian Dinar",
 			numCode:      "941",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"SCR": {
 			countryName: []Country{
@@ -2105,6 +2220,7 @@ var (
 			currencyName: "Seychelles Rupee",
 			numCode:      "690",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"SLL": {
 			countryName: []Country{
@@ -2117,6 +2233,7 @@ var (
 			currencyName: "Leone",
 			numCode:      "694",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"SGD": {
 			countryName: []Country{
@@ -2129,6 +2246,7 @@ var (
 			currencyName: "Singapore Dollar",
 			numCode:      "702",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"XSU": {
 			countryName: []Country{
@@ -2153,6 +2271,7 @@ var (
 			currencyName: "Solomon Islands Dollar",
 			numCode:      "090",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"SOS": {
 			countryName: []Country{
@@ -2165,6 +2284,7 @@ var (
 			currencyName: "Somali Shilling",
 			numCode:      "706",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"SSP": {
 			countryName: []Country{
@@ -2177,6 +2297,7 @@ var (
 			currencyName: "South Sudanese Pound",
 			numCode:      "728",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"LKR": {
 			countryName: []Country{
@@ -2189,6 +2310,7 @@ var (
 			currencyName: "Sri Lanka Rupee",
 			numCode:      "144",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"SDG": {
 			countryName: []Country{
@@ -2201,6 +2323,7 @@ var (
 			currencyName: "Sudanese Pound",
 			numCode:      "938",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"SRD": {
 			countryName: []Country{
@@ -2213,6 +2336,7 @@ var (
 			currencyName: "Surinam Dollar",
 			numCode:      "968",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"SEK": {
 			countryName: []Country{
@@ -2225,6 +2349,7 @@ var (
 			currencyName: "Swedish Krona",
 			numCode:      "752",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"CHE": {
 			countryName: []Country{
@@ -2237,6 +2362,7 @@ var (
 			currencyName: "WIR Euro",
 			numCode:      "947",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"CHW": {
 			countryName: []Country{
@@ -2249,6 +2375,7 @@ var (
 			currencyName: "WIR Franc",
 			numCode:      "948",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"SYP": {
 			countryName: []Country{
@@ -2261,6 +2388,7 @@ var (
 			currencyName: "Syrian Pound",
 			numCode:      "760",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"TWD": {
 			countryName: []Country{
@@ -2273,6 +2401,7 @@ var (
 			currencyName: "New Taiwan Dollar",
 			numCode:      "901",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"TJS": {
 			countryName: []Country{
@@ -2285,6 +2414,7 @@ var (
 			currencyName: "Somoni",
 			numCode:      "972",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"TZS": {
 			countryName: []Country{
@@ -2297,6 +2427,7 @@ var (
 			currencyName: "Tanzanian Shilling",
 			numCode:      "834",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"THB": {
 			countryName: []Country{
@@ -2309,6 +2440,7 @@ var (
 			currencyName: "Baht",
 			numCode:      "764",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"TOP": {
 			countryName: []Country{
@@ -2321,6 +2453,7 @@ var (
 			currencyName: "Pa’anga",
 			numCode:      "776",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"TTD": {
 			countryName: []Country{
@@ -2333,6 +2466,7 @@ var (
 			currencyName: "Trinidad and Tobago Dollar",
 			numCode:      "780",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"TND": {
 			countryName: []Country{
@@ -2357,6 +2491,7 @@ var (
 			currencyName: "Turkish Lira",
 			numCode:      "949",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"TMT": {
 			countryName: []Country{
@@ -2369,6 +2504,7 @@ var (
 			currencyName: "Turkmenistan New Manat",
 			numCode:      "934",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"UGX": {
 			countryName: []Country{
@@ -2393,6 +2529,7 @@ var (
 			currencyName: "Hryvnia",
 			numCode:      "980",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"AED": {
 			countryName: []Country{
@@ -2405,6 +2542,7 @@ var (
 			currencyName: "UAE Dirham",
 			numCode:      "784",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"USN": {
 			countryName: []Country{
@@ -2417,6 +2555,7 @@ var (
 			currencyName: "US Dollar (Next day)",
 			numCode:      "997",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"UYU": {
 			countryName: []Country{
@@ -2429,6 +2568,7 @@ var (
 			currencyName: "Peso Uruguayo",
 			numCode:      "858",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"UYI": {
 			countryName: []Country{
@@ -2465,6 +2605,7 @@ var (
 			currencyName: "Uzbekistan Sum",
 			numCode:      "860",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"VUV": {
 			countryName: []Country{
@@ -2489,6 +2630,7 @@ var (
 			currencyName: "Bolívar Soberano",
 			numCode:      "928",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"VED": {
 			countryName: []Country{
@@ -2501,6 +2643,7 @@ var (
 			currencyName: "Bolívar Soberano Digital",
 			numCode:      "926",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"VND": {
 			countryName: []Country{
@@ -2525,6 +2668,7 @@ var (
 			currencyName: "Yemeni Rial",
 			numCode:      "886",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"ZMW": {
 			countryName: []Country{
@@ -2537,6 +2681,7 @@ var (
 			currencyName: "Zambian Kwacha",
 			numCode:      "967",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"ZWL": {
 			countryName: []Country{
@@ -2549,6 +2694,7 @@ var (
 			currencyName: "Zimbabwe Dollar",
 			numCode:      "932",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"XBA": {
 			countryName: []Country{
@@ -2681,6 +2827,7 @@ var (
 			currencyName: "Afghani",
 			numCode:      "971",
 			minorUnit:    "2",
+			active:       true,
 		},
 		"SLE": {
 			countryName: []Country{
@@ -2693,6 +2840,7 @@ var (
 			currencyName: "Leone",
 			numCode:      "925",
 			minorUnit:    "2",
+			active:       true,
 		},
 	}
 )
