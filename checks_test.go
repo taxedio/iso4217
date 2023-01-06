@@ -22,6 +22,8 @@ var (
 	VES       string = "VES"
 	VESStruct        = ISOEntry(isocodes[VES])
 
+	HRK       string = "HRK"
+	HRKStruct        = ISOEntry(isocodes[HRK])
 )
 
 func TestAlphaMatch(t *testing.T) {
@@ -39,6 +41,7 @@ func TestAlphaMatch(t *testing.T) {
 		{"Nothing Test", args{s: ""}, Nil},
 		{"AWG Test", args{s: "Åruban Florin"}, &AWG},
 		{"VES Test", args{s: "Bolívar Soberano"}, &VES},
+		{"HRK Test", args{s: "kuna"}, &HRK},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
